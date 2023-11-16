@@ -40,8 +40,8 @@ export default function Formulario() {
 
             <Button title="Iniciar sesión" onPress={handleSubmit} style={FormularioStyle.btnSubmit} />
 
-            {isSuccess && <Text style={{...FormularioStyle.mensaje,...FormularioStyle.mensajeAcceso}}>Bienvenido</Text>}
-            {isError && <Text style={{...FormularioStyle.mensaje,...FormularioStyle.mensajeError}}>Credenciales incorrectas</Text>}
+            {isSuccess && <Text style={{ ...FormularioStyle.mensaje, ...FormularioStyle.mensajeAcceso }}>Bienvenido</Text>}
+            {isError && <Text style={{ ...FormularioStyle.mensaje, ...FormularioStyle.mensajeError }}>Credenciales incorrectas</Text>}
         </View>
     )
 }
