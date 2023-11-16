@@ -1,4 +1,4 @@
-import { Button, Text, View } from "react-native";
+import { Button, StyleSheet, Text, View } from "react-native";
 import InputText from "./InputText";
 import { useEffect, useState } from "react";
 
@@ -33,15 +33,39 @@ export default function Formulario() {
     }
 
     return (
-        <View>
+        <View style={FormularioStyle.contenedor}>
             {/* Input: Nombre usuario */}
             <InputText label="Nombre de usuario" onChange={setUsername} />
             <InputText label="Contraseña" password={true} onChange={handlePasswordChange} />
 
-            <Button title="Iniciar sesión" onPress={handleSubmit} />
+            <Button title="Iniciar sesión" onPress={handleSubmit} style={FormularioStyle.btnSubmit} />
 
-            {isSuccess && <Text>Bienvenido</Text>}
-            {isError && <Text>Credenciales incorrectas</Text>}
+            {isSuccess && <Text style={{...FormularioStyle.mensaje,...FormularioStyle.mensajeAcceso}}>Bienvenido</Text>}
+            {isError && <Text style={{...FormularioStyle.mensaje,...FormularioStyle.mensajeError}}>Credenciales incorrectas</Text>}
         </View>
     )
 }
+
+const FormularioStyle = StyleSheet.create({
+    contenedor: {
+        width: "100%",
+        marginTop: 40,
+        gap: 15,
+    },
+    btnSubmit: {
+        display: "flex",
+    },
+    mensaje: {
+        textAlign: "center",
+        padding: 8,
+        fontWeight: "bold"
+    },
+    mensajeError: {
+        backgroundColor: 'red',
+        color: 'yellow'
+    },
+    mensajeAcceso: {
+        backgroundColor: 'blue',
+        color: 'white'
+    }
+})
