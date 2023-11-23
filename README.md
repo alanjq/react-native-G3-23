@@ -9,7 +9,7 @@ La carpeta calculadora contiene la última versión del proyecto trabajado de fo
 
 ### Sesión 1
 
-Temas de esta sesión
+Temas 1
 
 - Configuración del ambiente
 - Fundamentos de React
@@ -20,7 +20,7 @@ ___
 
 ### Sesión 2
 
-Temas de esta sesión
+Temas 2
 
 - Resolviendo problemas de configuración
 - Primeros pasos con React y React Native
@@ -32,7 +32,7 @@ ___
 
 ### Sesión 3
 
-Temas de esta sesión
+Tema 3
 
 - Componentes core y nativos
 
@@ -42,7 +42,7 @@ ___
 
 ### Sesión 4
 
-Temas de esta sesión
+Tema 4
 
 - Maquetando la App con Figma
 
@@ -52,7 +52,8 @@ ___
 
 ### Sesión 5
 
-Temas de esta sesión
+Tema 5
+
 - Eventos
 - Estado
 - Contexto
@@ -64,7 +65,8 @@ ___
 
 ### Sesión 6
 
-Temas de esta sesión
+Tema 6
+
 - Servicios web
 - Uso de fetch
 - Manejo de estados según peticiones
