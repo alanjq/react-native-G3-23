@@ -4,15 +4,27 @@ function App() {
   const URL_API = 'https://api.coindesk.com/v1/bpi/currentprice.json'
 
   function handleError(causa) {
-    console.log(causa.message);
+
   }
 
-  fetch(URL_API)
-    .then((response) => response.json())
-    .then((response) => {
-      window.monedas = response.bpi
+  function fetch2(url) {
+    return fetch(url)
+    .then(response => response.json())
+    .then(response => response.bpi)
+    .catch((err) => console.log(err))
+  }
+
+  fetch2(URL_API)
+    .then((data) => {
+      window.monedas = data
     })
-    .catch(handleError)
+
+
+  fetch2(URL_API)
+    .then((bpi) => {
+      window.monedas = bpi
+    })
+
 
   return (
     <div>
