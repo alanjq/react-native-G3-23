@@ -1,7 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TextInput, View } from 'react-native';
-import Boton from './components/Boton';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { StyleSheet, Text, TextInput, View, Button } from 'react-native';
 
 export default function App() {
   const [input, setInput] = useState(0)
@@ -68,19 +67,21 @@ export default function App() {
 
       <View style={styles.contenedor}>
         <View>
-          <TextInput style={styles.textInput} value={total || input} editable={false} />
+          <TextInput style={styles.textInput} value={total || input} readOnly />
         </View>
         <View style={styles.fila}>
-          {botones.slice(0, 4).map((boton, i) => <Boton key={i} title={boton} onPress={handlePress} style={styles.botonC} />)}
+          {botones.slice(0, 4).map((boton, i) => <Button key={i} title={boton} onPress={handlePress} style={styles.botonResultado} />)}
         </View>
         <View style={styles.fila}>
-          {botones.slice(4, 8).map((boton, i) => <Boton key={i} title={boton} onPress={handlePress} style={styles.botonC} />)}
+          {botones.slice(4, 8).map((boton, i) => <Button key={i} title={boton} onPress={handlePress} style={styles.botonNumero} />)}
         </View>
         <View style={styles.fila}>
-          {botones.slice(8, 12).map((boton, i) => <Boton key={i} title={boton} onPress={handlePress} style={styles.botonC} />)}
+          {botones.slice(8, 12).map((boton, i) => <Button key={i} title={boton} onPress={handlePress} style={styles.botonResultado} />)}
         </View>
         <View style={styles.fila}>
-          {botones.slice(12, 16).map((boton, i) => <Boton key={i} title={boton} onPress={handlePress} style={styles.botonC} />)}
+          {botones.slice(12, 16).map((boton, i) => <Button key={i} title={boton} onPress={handlePress}
+            style={{ ...styles.botonOperacion, ...styles.botonResultado, ...styles.botonC }}
+          />)}
         </View>
       </View>
       <StatusBar style="auto" />
@@ -125,10 +126,11 @@ const styles = StyleSheet.create({
   },
   botonC: {
     backgroundColor: '#F9F4F4',
-    color: '#F9F4F4'
+    color: '#F9F4F4',
   },
   botonResultado: {
     backgroundColor: '#9500CA',
-    color: '#FFFBFB'
+    padding: 12,
+    color: '#FFFBFB',
   }
 });
