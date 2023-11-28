@@ -97,3 +97,9 @@ ___
     - Diseño de la interfaz
 
 [Grabación de la sesión (en YouTube)](https://youtu.be/7yc_TkWFCS0)
+
+### Sesión 8
+
+Durante esta sesión trabajamos en el proyecto final.
+
+[Grabación de la sesión (en YouTube)](https://youtu.be/2xNqQc2J9Nk)
